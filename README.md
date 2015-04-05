@@ -1,2 +1,2 @@
-# kunaldawn
-Source for my website www.profile.kunaldawn.com
+# profile
+Source for my website www.kunaldawn.com
