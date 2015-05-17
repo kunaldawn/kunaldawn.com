@@ -1,0 +1,54 @@
+{
+  "name": "Kunal Dawn",
+  "pages": [
+    {
+      "menu": "Me.About",
+      "header": "About Me",
+      "page": "contents/aboutme.html",
+      "default": true,
+      "type": "html"
+    },
+    {
+      "menu": "Me.Publications",
+      "header": "Publications",
+      "page": "contents/publications.html",
+      "type": "html"
+    },
+    {
+      "menu": "Me.Projects",
+      "header": "Projects",
+      "page": "contents/projects.html",
+      "type": "html"
+    }
+  ],
+  "navs": [
+    {
+      "res": "ion-social-facebook",
+      "name": "Facebook",
+      "link": "https://www.facebook.com/kunal.dawn"
+    },
+    {
+      "res": "ion-social-googleplus",
+      "name": "Google+",
+      "link": "https://plus.google.com/+KunalDawn"
+    },
+    {
+      "res": "ion-social-linkedin",
+      "name": "Linked-in",
+      "link": "https://jp.linkedin.com/pub/kunal-dawn/42/b01/336"
+    },
+    {
+      "res": "ion-social-wordpress",
+      "name": "WordPress",
+      "link": "https://kunaldawn.wordpress.com/"
+    },
+    {
+      "res": "ion-social-github",
+      "name": "Github",
+      "link": "https://github.com/kunaldawn"
+    }
+  ],
+  "copyright": {
+    "content": "Copyright © 2015 by Kunal Dawn"
+  }
+}

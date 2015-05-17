@@ -1,0 +1,70 @@
+<md-content ng-init="
+    papers =
+    [
+        {
+            'title':'Analysis of cooperation of node movement and its effects on messaging delay in DTN systems',
+            'author':'H. Wakayama, K. Dawn, M. Ogawa',
+            'where':'IEICE Technical Report',
+            'extra':'IEICE-NS2012-138 [(Vol. 112, No. 350), Pages: 127-132, Dec. 2012]',
+            'link':'http://i-scover.ieice.org/iscover/page/ARTICLE-E98E2EFE-04EA-C107-44F4-4C1701882306'
+        },
+        {
+            'title':'A Novel Gesture Based Graphical Authentication Using Bounding Box and Corner Detection Algorithm',
+            'author':'K. Dawn, G. Niranjana',
+            'where':'International Journal of Communication & Signal Processing / IEEE Explore',
+            'extra':'ISBN: 978-1-4673-1621-7 [Pages: 114-119, ICCSP 2012 Associated with IEEE April 2012]',
+            'link':'http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6208405&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6208405'
+        },
+        {
+            'title':'Graphical Authentication Using Region Based Graphical Password',
+            'author':'K. Dawn, G. Niranjana',
+            'where':'IOAJ International Journal of Computer Science & Information Technology',
+            'extra':'ISSN: 2231-5292 [(Volume. 2 Issue. 3) Pages: 6-11, ICCSIT 2012 COIMBATORE]',
+            'link':'http://interscience.in/IJCSI_Vol2Iss3/6-11.pdf'
+        },
+        {
+            'title':'Investigation of Educational Content Delivery in Villages Using Bus Assisted DTN and its Simulation Analysis',
+            'author':'K. Dawn, G. Niranjana',
+            'where':'CiiT International Journal of Networking and Communication Engineering',
+            'extra':'ISSN: 0974-9616 [(Vol.7 No.2) Jan 2015]',
+            'link':'http://www.ciitresearch.org/dl/index.php/nce/article/view/NCE022015003.'
+        },
+        {
+            'title':'A Cryptosystem based on Elliptic Curve Cryptography',
+            'author':'M. Devaraj, K. Dawn, D. Singh & S. Sonam',
+            'where':'International Journal of Computer Science and Information Technology',
+            'extra':'ISSN: 0974-8385 [(Vol.3 No.1 Jan-June 2010) Pages: 41-45]',
+            'link':'http://www.serialspublications.com/journals/journal-detail.php?jid=65'
+        },
+        {
+            'title':'Liquid Interface Control using Hand Gesture',
+            'author':'D. Singh, K. Dawn, M. Devaraj & S. Sonam',
+            'where':'International Journal of Computer Science and Information Technology',
+            'extra':'ISSN: 0974-8385 [(Vol.3 No.1 Jan-June 2010) Pages: 41-45]',
+            'link':'http://www.serialspublications.com/journals/journal-detail.php?jid=65'
+        },
+        {
+            'title':'Performance Comparisons of Single & Multipath Routing Protocol over MANETs ',
+            'author':'S. Sonam, K. Dawn, M. Devaraj & D. Singh',
+            'where':'International Journal of Computer Science and Information Technology',
+            'extra':'ISSN: 0974-8385 [(Vol.3 No.1 Jan-June 2010) Pages: 47-51]',
+            'link':'http://www.serialspublications.com/journals/journal-detail.php?jid=65'
+        }
+    ]">
+    <div ng-repeat="paper in papers" flex>
+        <md-card>
+            <md-card-content>
+                <div layout="row" layout-align="start center">
+                    <h1 class="md-count" layout layout-align="center center">{{$index + 1}}</h1>
+
+                    <div flex layout="column" layout-align="start start">
+                        <h3>{{paper.title}}</h3>
+                        <b>{{paper.author}}</b>
+                        <b ng-if="paper.extra">{{paper.extra}}</b>
+                        <a class="pub" href="{{paper.link}}">{{paper.where}}</a>
+                    </div>
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+</md-content>
