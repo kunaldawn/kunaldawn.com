@@ -2,20 +2,20 @@
   "name": "Kunal Dawn",
   "pages": [
     {
-      "menu": "Me.About",
+      "menu": "About",
       "header": "About Me",
       "page": "contents/aboutme.html",
       "default": true,
       "type": "html"
     },
     {
-      "menu": "Me.Publications",
+      "menu": "Publications",
       "header": "Publications",
       "page": "contents/publications.html",
       "type": "html"
     },
     {
-      "menu": "Me.Projects",
+      "menu": "Projects",
       "header": "Projects",
       "page": "contents/projects.html",
       "type": "html"
