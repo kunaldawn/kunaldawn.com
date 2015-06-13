@@ -83,35 +83,27 @@
                           </div>
                           <div class="panel-body">
                               <div>
-                                    <h3>Title: {{item.title}}</h3>
-                                    <table>
-                                        <tr>
-                                            <td style="min-width: 100px"><b>Team Size:</b></td>
-                                            <td>{{item.team}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><b>Environment:</b></td>
-                                            <td>{{item.env}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><b>Duration:</b></td>
-                                            <td>{{item.dur}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><b>Role:</b></td>
-                                            <td>{{item.role}}</td>
-                                        </tr>
-                                    </table>
+                                  <ul class="list-group">
+                                      <li class="list-group-item">
+                                                <b>Team Size : </b>{{item.team}}
+                                      </li>
+                                      <li class="list-group-item">
+                                            <b>Environment : </b>{{item.env}} 
+                                      </li>
+                                      <li class="list-group-item">
+                                            <b>Duration : </b>{{item.dur}}
+                                      </li>
+                                      <li class="list-group-item">
+                                            <b>Role : </b>{{item.role}}
+                                      </li>
+                                      <li class="list-group-item">
+                                            <b>Description : </b>{{item.des}}
+                                      </li>
+                                      <li class="list-group-item" ng-if="item.link">
+                                            <b>Source : <a href="{{item.link}}">{{item.link}}</a></b>
+                                      </li>
+                                    </ul>
                                     <p>
-                                        <hr/>
-                                        <b>Description:</b>
-                                        {{item.des}}
-                                    </p>
-                                    <b ng-if="item.link">
-                                        Source : <a href="{{item.link}}">{{item.link}}</a>
-                                    </b>
-                                    <p>
-                                    {{item.vid}}
                                         <div class="embed-responsive embed-responsive-16by9" ng-if="item.vid">
                                             <iframe ng-if="item.vid" class="embed-responsive-item" ng-src="{{item.vid}}"></iframe>
                                         </div>
