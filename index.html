@@ -12,9 +12,9 @@
 </head>
 <body ng-controller="ProfileCtrl" ng-cloak>
 
-<div class="container-fluid">
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
+
+  <nav class="navbar navbar-static-top" role="navigation">
+    <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -44,8 +44,8 @@
       </div>
     </div>
   </nav>
-
-  <div class="container-fluid" ng-clock>
+<div class="container">
+  <div class="container" ng-clock>
        <div ng-include="content.page"></div>
        <div class="well well-sm">
           <div class="text-center">{{copyright.content}}</div>
