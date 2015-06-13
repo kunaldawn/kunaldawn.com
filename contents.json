@@ -4,51 +4,51 @@
     {
       "menu": "About",
       "header": "About Me",
+      "res" : "fa-user",
       "page": "contents/aboutme.html",
-      "default": true,
-      "type": "html"
+      "default": true
     },
     {
       "menu": "Publications",
       "header": "Publications",
-      "page": "contents/publications.html",
-      "type": "html"
+      "res" : "fa-pencil-square-o",
+      "page": "contents/publications.html"
     },
     {
       "menu": "Projects",
       "header": "Projects",
-      "page": "contents/projects.html",
-      "type": "html"
+      "res" : "fa-code-fork",
+      "page": "contents/projects.html"
     }
   ],
   "navs": [
     {
-      "res": "ion-social-facebook",
-      "name": "Facebook",
-      "link": "https://www.facebook.com/kunal.dawn"
+      "res": "fa-facebook",
+      "link": "https://www.facebook.com/kunal.dawn",
+      "name": "Facebook"
     },
     {
-      "res": "ion-social-googleplus",
-      "name": "Google+",
-      "link": "https://plus.google.com/+KunalDawn"
+      "res": "fa-google-plus",
+      "link": "https://plus.google.com/+KunalDawn",
+      "name": "Google+"
     },
     {
-      "res": "ion-social-linkedin",
-      "name": "Linked-in",
-      "link": "https://jp.linkedin.com/pub/kunal-dawn/42/b01/336"
+      "res": "fa-linkedin",
+      "link": "https://jp.linkedin.com/pub/kunal-dawn/42/b01/336",
+      "name": "LinkedIn"
     },
     {
-      "res": "ion-social-wordpress",
-      "name": "WordPress",
-      "link": "https://kunaldawn.wordpress.com/"
+      "res": "fa-wordpress ",
+      "link": "https://kunaldawn.wordpress.com/",
+      "name": "Wordpress"
     },
     {
-      "res": "ion-social-github",
-      "name": "Github",
-      "link": "https://github.com/kunaldawn"
+      "res": "fa-github ",
+      "link": "https://github.com/kunaldawn",
+      "name": "Github"
     }
   ],
   "copyright": {
-    "content": "Profile v0.4.2 Copyright © 2015 by Kunal Dawn"
+    "content": "Profile v0.5.1 Copyright © 2015 by Kunal Dawn"
   }
 }

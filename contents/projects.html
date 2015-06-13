@@ -1,4 +1,4 @@
-<md-content ng-init="
+<div ng-init="
     projects = [
         {
             name : 'SRM Technologies',
@@ -39,7 +39,7 @@
                     dur : '6 months',
                     role : 'Programmer, Algorithm Designer, Hardware Developer',
                     des : 'Development Low Cost Hardware and Software for 4th Generation Human Computer Interaction. The project involves development of complete Software Stack with development two different Multi-Touch hardware based on Frustrated Total Internal Reflection and Diffused Illumination in Infrared Spectrum. The project also involves in development of unified and optimized image processing algorithms to process Infrared Spectrum at realtime and provide Multi-Touch inputs to Windows 7 Kernel via HID interface.',
-                    vid : 'https://www.youtube.com/watch?v=cTaj0XCenGE'
+                    vid : 'https://www.youtube.com/embed/cTaj0XCenGE'
                 },
                 {
                     title : 'Investigation of Graphical Authentication Techniques',
@@ -64,56 +64,64 @@
                     dur : '6 months',
                     role : 'Programmer',
                     des : 'The project aims in development of a human computer interaction system based on digital image processing to replace hardware based mouse interface.',
-                    vid : 'https://www.youtube.com/watch?v=U8uP15knOBk',
+                    vid : 'https://www.youtube.com/embed/U8uP15knOBk',
                     link : 'http://kunaldawn.github.io/vmouse-opencv-qt-hand-gesture-hci/'
                 }
             ]
         }
     ]">
-    <div ng-repeat="project in projects" flex>
-        <md-toolbar class="md-info">
-            <div class="md-toolbar-tools">
-                <h2 class="md-flex">{{project.name}}</h2>
+    <div ng-repeat="project in projects" >
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title"><h2>{{project.name}}</h2></div>
             </div>
-        </md-toolbar>
-        <md-card ng-repeat="item in project.items">
-            <md-card-content>
-                <div layout="row" layout-align="start center">
-                    <h1 class="md-count" layout layout-align="center center">{{$index + 1}}</h1>
-
-                    <div flex layout="column" layout-align="start start">
-                        <h3>Title: {{item.title}}</h3>
-                        <table>
-                            <tr>
-                                <td style="min-width: 140px"><b>Team Size:</b></td>
-                                <td>{{item.team}}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Environment:</b></td>
-                                <td>{{item.env}}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Duration:</b></td>
-                                <td>{{item.dur}}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Role:</b></td>
-                                <td>{{item.role}}</td>
-                            </tr>
-                        </table>
-                        <p>
-                            <b>Description:</b>
-                            {{item.des}}
-                        </p>
-                        <b ng-if="item.link">
-                            Source : <a href="{{item.link}}">{{item.link}}</a>
-                        </b>
-                        <p ng-if="item.vid">
-                            <youtube-video video-url="item.vid"></youtube-video>
-                        </p>
-                    </div>
-                </div>
-            </md-card-content>
-        </md-card>
+            <div class="panel-body">
+                  <div ng-repeat="item in project.items">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <h3>Title: {{item.title}}</h3>
+                          </div>
+                          <div class="panel-body">
+                              <div>
+                                    <h3>Title: {{item.title}}</h3>
+                                    <table>
+                                        <tr>
+                                            <td style="min-width: 100px"><b>Team Size:</b></td>
+                                            <td>{{item.team}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Environment:</b></td>
+                                            <td>{{item.env}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Duration:</b></td>
+                                            <td>{{item.dur}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Role:</b></td>
+                                            <td>{{item.role}}</td>
+                                        </tr>
+                                    </table>
+                                    <p>
+                                        <hr/>
+                                        <b>Description:</b>
+                                        {{item.des}}
+                                    </p>
+                                    <b ng-if="item.link">
+                                        Source : <a href="{{item.link}}">{{item.link}}</a>
+                                    </b>
+                                    <p>
+                                    {{item.vid}}
+                                        <div class="embed-responsive embed-responsive-16by9" ng-if="item.vid">
+                                            <iframe ng-if="item.vid" class="embed-responsive-item" ng-src="{{item.vid}}"></iframe>
+                                        </div>
+                                    </p>
+                                </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
     </div>
-</md-content>
+<div>
+
