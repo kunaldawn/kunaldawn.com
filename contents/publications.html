@@ -51,20 +51,22 @@
             'link':'http://www.serialspublications.com/journals/journal-detail.php?jid=65'
         }
     ]">
-    <div ng-repeat="paper in papers" flex>
-        <md-card>
-            <md-card-content>
-                <div layout="row" layout-align="start center">
-                    <h1 class="md-count" layout layout-align="center center">{{$index + 1}}</h1>
-
-                    <div flex layout="column" layout-align="start start">
-                        <h3>{{paper.title}}</h3>
-                        <b>{{paper.author}}</b>
-                        <b ng-if="paper.extra">{{paper.extra}}</b>
-                        <a class="pub" href="{{paper.link}}">{{paper.where}}</a>
-                    </div>
+    <ul class="list-group" ng-repeat="paper in papers">
+        <li class="list-group-item">
+           <div class="media">
+                <div class="media-left media-middle">
+                    <h1 style="padding:10px; color:#03A634;">{{$index + 1}}</h1>
                 </div>
-            </md-card-content>
-        </md-card>
-    </div>
+                <div class="media-body">
+                    <h3 class="media-heading">{{paper.title}}</h3>
+                    <hr/>
+                    <p/>
+                      <p>Author : {{paper.author}}</p>
+                      <p ng-if="paper.extra">Information : {{paper.extra}}</p>
+                      <p>Source : <a class="pub" href="{{paper.link}}">{{paper.where}}</a></p>
+                </div>
+            </div> 
+        </li>
+    </ul>
+
 </md-content>
