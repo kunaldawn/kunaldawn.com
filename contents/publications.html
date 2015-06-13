@@ -51,22 +51,22 @@
             'link':'http://www.serialspublications.com/journals/journal-detail.php?jid=65'
         }
     ]">
-    <ul class="list-group" ng-repeat="paper in papers">
-        <li class="list-group-item">
-           <div class="media">
-                <div class="media-left media-middle">
-                    <h1 style="padding:10px; color:#03A634;">{{$index + 1}}</h1>
-                </div>
-                <div class="media-body">
-                    <h3 class="media-heading">{{paper.title}}</h3>
-                    <hr/>
-                    <p/>
-                      <p>Author : {{paper.author}}</p>
-                      <p ng-if="paper.extra">Information : {{paper.extra}}</p>
-                      <p>Source : <a class="pub" href="{{paper.link}}">{{paper.where}}</a></p>
-                </div>
-            </div> 
-        </li>
-    </ul>
-
+    <div class="panel panel-default" ng-repeat="paper in papers">
+        <div class="panel-heading">
+            <div class="panel-title"><h3>{{paper.title}}</h3></div>
+        </div>
+        <div class="panel-body">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <b>Author : </b>{{paper.author}}
+                </li>
+                <li class="list-group-item" ng-if="paper.extra">
+                    <b>Information : </b>{{paper.extra}}
+                </li>
+                <li class="list-group-item">
+                    <b>Source : </b><a href="{{paper.link}}">{{paper.link}}</a></b>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
